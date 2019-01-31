@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from PIL import Image
 import recognize_local
 import re
-import emailtou
+import emailto_u
 
 
 def isElementExist():
@@ -97,4 +97,4 @@ else:
                 sleep(0.5)
                 browser.find_element_by_xpath('//*[@id="query_list"]/tr[2]/td[8]/a/img').click()
                 print("有票")
-                emailtou()  #发邮件
+                emailto_u()  #发邮件
