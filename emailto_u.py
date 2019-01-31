@@ -4,11 +4,11 @@ from email.header import Header
 
 def main():
     mail_host = "smtp.163.com"  # SMTP服务器
-    mail_user = "jing_57@163.com"  # 用户名
-    mail_pass = "12345abcd"  # 密码
+    mail_user = "***@163.com"  # 用户名
+    mail_pass = "***"  # 密码
  
-    sender = 'jing_57@163.com'  # 发件人邮箱(最好写全, 不然会失败)
-    receivers = ['694529759@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+    sender = '***@163.com'  # 发件人邮箱(最好写全, 不然会失败)
+    receivers = ['****@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
  
  
     content = '有票啦!'
