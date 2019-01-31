@@ -6,27 +6,27 @@
 ===
 验证码破解 参考项目 [基于卷积神经网络的验证码识别](https://github.com/nickliqian/cnn_captcha)  
 Python 操作网页 依赖模块  
-  pip3 install selenium tensorflow==1.7.0 flask==1.0.2 requests==2.19.1 Pillow==4.3.0 matplotlib==2.1.0 easydict==1.8  
+    pip3 install selenium tensorflow==1.7.0 flask==1.0.2 requests==2.19.1 Pillow==4.3.0 matplotlib==2.1.0 easydict==1.8  
 邮件发送 注意收件箱及发件箱均需开启 SMTP
 
 参数配置
 ===
 buyticket.py文件
 ---
-本项目针对郑州东--香港西九龙，若需要改变出发/到达站点，相应XPATH也需改变。具体可看文件内注释  
-isElementExist中定义的Xpath也需改变，见下图标红区域获取Xpath  
-不同屏幕不同分辨率可能会需要配置不同的数据 
-运行buyticket文件后获取screenshot.png文件，用WIN自带的画图软件打开，光标放置验证码图片的左上角及右下角得到图片起始坐标。  
-根据记录的坐标，改变参数
+  本项目针对郑州东--香港西九龙，若需要改变出发/到达站点，相应XPATH也需改变。具体可看文件内注释  
+  isElementExist中定义的Xpath也需改变，见下图标红区域获取Xpath  
+  不同屏幕不同分辨率可能会需要配置不同的数据 
+  运行buyticket文件后获取screenshot.png文件，用WIN自带的画图软件打开，光标放置验证码图片的左上角及右下角得到图片起始坐标。  
+  根据记录的坐标，改变参数
   rangle = (int(x1), int(y1), int(x2),int(y2))  
 emailto_u.py文件
 ---
 根据注释标注填写邮箱就可以了
 使用方法
 ===
-1.打开 recognize_api.py 开启本地接口
-2.打开buyticket.py文件运行
-3.完成，等待邮件通知
+1.打开 recognize_api.py 开启本地接口  
+2.打开buyticket.py文件运行  
+3.完成，等待邮件通知  
 
 写在最后
 ===
