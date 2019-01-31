@@ -10,7 +10,8 @@ Python 操作网页 依赖模块
 邮件发送 注意收件箱及发件箱均需开启 SMTP
 
 参数配置
----
+===
+
 ##buyticket.py文件  
   本项目针对郑州东--香港西九龙，若需要改变出发/到达站点，相应XPATH也需改变。具体可看文件内注释  
   isElementExist中定义的Xpath也需改变，见下图标红区域获取Xpath  
@@ -20,6 +21,7 @@ Python 操作网页 依赖模块
   rangle = (int(x1), int(y1), int(x2),int(y2))  
 ##emailto_u.py文件
 根据注释标注填写邮箱就可以了
+
 使用方法
 ===
         1.打开 recognize_api.py 开启本地接口  
