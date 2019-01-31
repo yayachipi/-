@@ -47,9 +47,12 @@ sleep(0.2)
 browser.find_element_by_id('captcha').click()
 def captcha_break():
         browser.get_screenshot_as_file('screenshot.png')#截图
+        '''
+        ====下述方法在此不可用因为屏幕装不下整个网页（即需要下拉才能看到验证码）
         imgelement = browser.find_element_by_xpath('//*[@id="kaptchaImage"]')  # 定位验证码
         location = imgelement.location  # 获取验证码x,y轴坐标
         size = imgelement.size  # 获取验证码的长宽
+        '''
         rangle = (int(320), int(766), int(435),int(805))  # 写成我们需要截取的位置坐标(不同屏幕不同分辨率可能会有差异)
         i= Image.open("screenshot.png")  # 打开截图
         frame4 = i.crop(rangle)  # 使用Image的crop函数，从截图中再次截取我们需要的区域
@@ -59,8 +62,6 @@ def captcha_break():
         p_text=recognize_local.main()#调用识别验证码程序
         browser.find_element_by_id('captcha').send_keys(p_text)#输入验证码
         sleep(0.5)
-# 判断alert弹出框
-
 captcha_break()
 browser.find_element_by_id('query_btn').click()#提交验证码
 pd=isElementExist()
@@ -93,8 +94,8 @@ else:
                 browser.maximize_window()
                 browser.execute_script("window.scrollBy(10,-500)")
                 sleep(2)
-                browser.find_element_by_xpath('//*[@id="2400000G790F"]').click()
+                browser.find_element_by_xpath('//*[@id="2400000G790F"]').click()#车次不同需改XPath
                 sleep(0.5)
-                browser.find_element_by_xpath('//*[@id="query_list"]/tr[2]/td[8]/a/img').click()
+                browser.find_element_by_xpath('//*[@id="query_list"]/tr[2]/td[8]/a/img').click()#二等座
                 print("有票")
                 emailto_u()  #发邮件
